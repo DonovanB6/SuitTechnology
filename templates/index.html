@@ -1,21 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<title>SuitBot</title>
 <head>
-    <meta charset="UTF-8">
-    <title>SuitBot</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+      body {
+        font-family: monospace;
+      }
+      h1 {
+        background-color: #FFC9BE;
+        display: inline-block;
+        font-size: 3em;
+        margin: 0;
+        padding: 14px;
+      }
+      h3 {
+        color: black;
+        font-size: 20px;
+        margin-top: 3px;
+        text-align: center;
+      }
+      #chatbox {
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        margin-top: 60px;
+      }
+      #userInput {
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        margin-top: 60px;
+      }
+      #textInput {
+        width: 90%;
+        border: none;
+        border-bottom: 3px solid black;
+        font-family: monospace;
+        font-size: 17px;
+      }
+      .userText {
+        color: black;
+        font-family: monospace;
+        font-size: 17px;
+        text-align: right;
+        line-height: 30px;
+      }
+      .userText span {
+        background-color: red;
+        padding: 10px;
+        border-radius: 2px;
+      }
+      .botText {
+        color: black;
+        font-family: monospace;
+        font-size: 17px;
+        text-align: left;
+        line-height: 30px;
+      }
+      .botText span {
+        background-color: #BEE3FF;
+        padding: 10px;
+        border-radius: 2px;
+      }
+      #tidbit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+      }
+      .boxed {
+        margin-left: auto;
+        margin-right: auto;
+        width: 550px;
+        margin-top: 60px;
+        border: 5px solid black;
+      }
+      .box {
+        border: 2px solid black;
+      }
+    </style>
+
 </head>
-<body style="align-items: center; justify-content: center; display: flex;">
-<div id='bodybox' style="border:solid 5px black; width: 350px; height: 700px; padding-left: 10px; left: 10px; position: relative">
-  <div id='chatborder' style="width: 300px">
-    <p id="chatlog7" class="chatlog">&nbsp;</p>
-    <p id="chatlog6" class="chatlog">&nbsp;</p>
-    <p id="chatlog5" class="chatlog">&nbsp;</p>
-    <p id="chatlog4" class="chatlog">&nbsp;</p>
-    <p id="chatlog3" class="chatlog">&nbsp;</p>
-    <p id="chatlog2" class="chatlog">&nbsp;</p>
-    <p id="chatlog1" class="chatlog">&nbsp;</p>
-    <label for="chatbox"></label><input type="text" name="chat" id="chatbox" style="width: 90%; height: 22px; padding-left: 5px; position: absolute; bottom: 0" placeholder="Hi there! Type here to talk to me." onfocus="placeHolder()">
-  </div>
-</div>
-</body>
+    <body>
+        <div class="boxed">
+        <div>
+            <div id="chatbox">
+                <p class="botText">
+                <span>Hello there! I am SuitBot</span>
+                </p>
+            </div>
+            <div id="userInput">
+                <input id="textInput" type="text" name="msg" placeholder="Enter Text Here"/>
+            </div>
+        </div>
+        <script>
+                function getBotResponse() {
+                  var rawText = $("#textInput").val();
+                  var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+                  $("#textInput").val("");
+                  $("#chatbox").append(userHtml);
+                  document
+                    .getElementById("userInput")
+                    .scrollIntoView({ block: "start", behavior: "smooth" });
+                  $.get("/get", { msg: rawText }).done(function(data) {
+                    var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+                    $("#chatbox").append(botHtml);
+                    document
+                      .getElementById("userInput")
+                      .scrollIntoView({ block: "start", behavior: "smooth" });
+                  });
+                }
+                $("#textInput").keypress(function(e) {
+                  if (e.which == 13) {
+                    getBotResponse();
+                  }
+                });
+              </script>
+        </div>
+    </body>
 </html>

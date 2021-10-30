@@ -1,17 +1,18 @@
-import os
-from urllib.request import urlretrieve as retrieve
-from werkzeug.utils import secure_filename
-
-from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
+import spacy
 
 from config import flow
 
-from flask import Flask, render_template, request, redirect, flash, url_for
+from flask import Flask, render_template, request
+from chatterbot import ChatBot
+from chatterbot.trainers import ChatterBotCorpusTrainer
+from chatterbot.trainers import ListTrainer
 
-bot = ChatBot("SuitBot")
+
+bot = ChatBot("suitbot")
 trainer = ListTrainer(bot)
-trainer.train(flow)
+trainer.train(str(flow))
+trainer = ChatterBotCorpusTrainer(bot)
+# trainer.train("chatterbot.corpus.english")
 
 
 app = Flask(__name__)
@@ -25,8 +26,8 @@ def index():
 
 @app.route("/get")
 def get_bot_response():
-    user_response = request.args.get('msg')
-    return str(bot.get_response(user_response))
+    userText = request.args.get('msg')
+    return str(bot.get_response(userText))
 
 
 app.secret_key = 'some_secret_key'
