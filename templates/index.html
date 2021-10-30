@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
 <title>SuitBot</title>
+
+<style>
+      .topNav {
+            background-color: #333;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            align-items:center
+        }
+ </style>
+
 <head>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -85,6 +98,11 @@
 
 </head>
     <body>
+
+    <div class="topNav" style="text-align:center" >
+  <a class="active" href="#home" style="color: #f2f2f2;padding: 14px 16px;">Home</a>
+  <a href="../templates/about.html" style="color: #f2f2f2;padding: 14px 16px;font-size: 17px;">About Us</a>
+</div>
         <div class="boxed">
         <div>
             <div id="chatbox">
