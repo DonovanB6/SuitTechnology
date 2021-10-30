@@ -1,0 +1,42 @@
+patterns,tags
+Hello,greeting
+Hey,greeting
+Hi,greeting
+Hey there,greeting
+What's up?,greeting
+Hola,greeting
+Top of the morning,greeting
+Internship,internships
+Tell me about internships,internships
+Are there any internships available?,internships
+What internship opportunities are available?,internships
+Scholarships,scholarships
+Tell me about scholarships,scholarships
+What scholarships are available?,scholarships
+Are there any scholarship opportunities available?,scholarships
+Work Studies,work_studies
+Tell me about work studies,work_studies
+What work studies are available?,work_studies
+Are there any work studies available?,work_studies
+Thanks for your help,thanking
+Thank you,thanking
+Thanks,thanking
+Gracias,thanking
+Goodbye,closing
+Bye,closing
+Adios,closing
+No Thanks for your help!,closing
+I'm feeling uninspired,inspirational
+Inspire me,inspirational
+I need some insipration,inspirational
+I need some Inspiration,inspirational
+Give me an Inspirational quote,inspirational
+I'm feeling unmotivated,motivational
+Motivate me,motivational
+What is a motivational quote?,motivational
+I need some motivation,motivational
+Give me a motivational quote,motivational
+I'm feeling sad,sad
+I'm sad,sad
+I'm feeling down,sad
+Give me an uplifting quote,sad

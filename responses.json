@@ -1,0 +1,70 @@
+{
+    "intents": [
+            {
+                "greeting": [
+                    "Hello there, how can I help?",
+                    "Hello friend, what can I do for you",
+                    "Hey, how can I help you?"
+                ]
+            },
+            {
+                "internships":[
+                    "Yes, here's a link to an internship: www.blah.com",
+                    "Here's  a link to available internships that might interest you: www.blah.com",
+                    "Here is a link to an internship I think you might be interested in: www.blah.com"
+                ]
+            },
+            {
+                "scholarships": [
+                    "Sure, I think this Scholarship might interest you: www.blah.com",
+                    "Yes, here's a link to a scholarship: www.blah.com",
+                    "Here's a link to a scholarship you might be interested in: www.blah.com"
+                ]
+            },
+            {
+                "work_studies": [
+                    "Sure, here is a link to a work study: www.blah.com",
+                    "Here is a link to a work study: www.blah.com",
+                    "Here's a link to a work study that you might be interested in: www.blah.com"
+                ]
+            },
+            {
+                "thanking": [
+                    "No Problem!",
+                    "I'm happy to help!",
+                    "My Pleasure! I'm glad I was able to help!",
+                    "No, Problem, is there anything else I can help you with?",
+                    "No Problem, is there another opportunity you, would like to learn about?"
+                ]
+            },
+            {
+                "closing": [
+                    "Okay, have a good rest of your day!",
+                    "Okay, Goodbye!",
+                    "I'm glad I was able to assist you, goodbye!"
+                ]
+            },
+            {
+                "inspirational":[
+                    "The best view comes after the hardest climb.",
+                    "Believe you can and you're halfway there.",
+                    "Nothing is impossible, the word itself says I'm Possible!"
+                ]
+            },
+            {
+                "motivational": [
+                    "Victory requires payment in advance",
+                    "The only time you fail is when you fall and stay down.",
+                    "There are no shortcuts to any place worth going.",
+                    "Strive for progress, not perfection."
+                ]
+            },
+            {
+                "sad": [
+                    "No one is perfect, that's why pencils have erasers.",
+                    "Live life to its fullest and focus on the positive",
+                    "You always pass failure on the way to success"
+                ]
+            }
+        ]
+    }
