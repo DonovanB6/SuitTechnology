@@ -1,7 +1,8 @@
 /* 5 columns side by side */
 .column {
   float: left;
-  width: 16.66%;
+  width: 23.75%;
+  top: -100px;
   margin-bottom: 16px;
   padding: 0 8px;
 }
