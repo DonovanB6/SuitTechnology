@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ChatBot</title>
+    <title>SuitBot</title>
 </head>
-<body>
-<div id='bodybox' width="512" height="512" style="border:solid 10px black">
-  <div id='chatborder'>
+<body style="align-items: center; justify-content: center; display: flex;">
+<div id='bodybox' style="border:solid 5px black; width: 350px; height: 700px; padding-left: 10px; left: 10px; position: relative">
+  <div id='chatborder' style="width: 300px">
     <p id="chatlog7" class="chatlog">&nbsp;</p>
     <p id="chatlog6" class="chatlog">&nbsp;</p>
     <p id="chatlog5" class="chatlog">&nbsp;</p>
@@ -14,7 +14,7 @@
     <p id="chatlog3" class="chatlog">&nbsp;</p>
     <p id="chatlog2" class="chatlog">&nbsp;</p>
     <p id="chatlog1" class="chatlog">&nbsp;</p>
-    <input type="text" name="chat" id="chatbox" placeholder="Hi there! Type here to talk to me." onfocus="placeHolder()" height="22px" width="100%">
+    <label for="chatbox"></label><input type="text" name="chat" id="chatbox" style="width: 90%; height: 22px; padding-left: 5px; position: absolute; bottom: 0" placeholder="Hi there! Type here to talk to me." onfocus="placeHolder()">
   </div>
 </div>
 </body>
