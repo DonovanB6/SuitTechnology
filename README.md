@@ -1,5 +1,5 @@
 # WSSUHack2021Nationwide - *SuitBot*
-**SuitBot** Is a Java Flask Application which allows users to send chat request to an automated chatbot who can then relay to the user useful and positive information.
+**SuitBot** Is a Python Flask Application which allows users to send chat request to an automated chatbot who can then relay to the user useful and positive information.
 
 **Contributers**: *Hector Santiago-Donovan Benson-Kel Lee-Abdul Mohammed*
 
